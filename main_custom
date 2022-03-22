@@ -1,0 +1,372 @@
+  /* 
+DO NOT STEAL THE CSS OR EDIT IT IN ANY WAY
+Made by Itami#3975
+IGN : quicksex
+twitter : @reikatugames
+tiktok : @reikatu , @quicksax
+ */
+  : root {
+      --health-icon-opacity: 1;
+      --timer-icon-opacity: 1;
+      --main-color: #ff9cf3;
+      --secondary-color: #F4CCCC;
+  }
+  @font-face {
+      font-family: gamefont;
+      src: url(https://dl.dropboxusercontent.com/s/p8l443v4hlry84t/orbitron-bold.otf?dl=0)
+  }
+/* ads */
+div#streamContainer { display: none; }
+div#twitchDropsAd.youNewDiv { display: none !important; }
+div#doubleXPAd.youNewDiv { display: none !important; }
+div#dropsPop { display: none !important; }
+div#newUserGuide.youNewDiv { display: none; }
+div#krDiscountAd.youNewDiv { display: none; }
+div#updateAd.youNewDiv { display: none !important; }
+div#rankedBlog.youNewDiv { display: none; }
+div#headerRight.headerBarRight.headerBar { display: none; }
+div#newsHolder { display: none; }
+div#mapInfo { display: none; }
+div#mapInfoHolder { display: none; }
+div#aContainer, div#aMerger { display: none !important; }
+div#rankedSoonTm { display: none; }
+#loadInfoLHolder, #loadGamNm, #loadInfoRHolder { display: none !important; }
+#exitButton { display: none !important; }
+div#rankedPop { display: none !important;}
+div#bundlePop { display: none !important; }
+div#claimPop { display: none !important; }
+div#bubbleContainer { display: none !important}
+
+  /* customise button */
+#menuClassNameTag,
+#menuClassName,
+#menuClassSubtext {
+    display: none !important;
+}
+
+#customizeButton {
+    left: ;
+    bottom: -70px;
+}
+  /* the left slider thing */
+
+
+#menuHolder:before{
+  left: 20%;
+  bottom: 20%
+}
+  /* the main logo hover thing */
+
+  #mainLogo {
+      content: url(https://media.discordapp.net/attachments/857164987038302238/952573091517714513/MF8yNjAucG5n.png);
+    transform:scale(1.2);
+    position: ;
+  }
+  #gameNameHolder:hover #mainLogo {
+  }
+
+  #gameNameHolder {
+      pointer-events: all;
+      font-size: 0;
+      color: transparent;
+      transition: 0.5s;
+  }
+  #gameNameHolder:hover {
+      font-size: 33px;
+      color: #fff;
+      top: 0%;
+      bottom: 10%
+  }
+
+  #gameNameHolder::before {
+      content: "made by Itami#3975";
+      display: block;
+      font-family: 'ISOCP';
+  }
+
+  /* the HUD shit */
+  
+  #clientExit {
+    display: flex;
+  }
+  #killCount:after {
+      content:"K";
+  }
+
+  #deathCount:after {
+    content:"D";
+  }
+
+  #streakCount:after {
+      content:"S";
+  }
+
+  #scoreCount:after {
+    content:"P";
+  }
+ 
+  /* host stuff */
+
+#subLogoButtons {
+    bottom: 72px;
+    transform: translate(-50%,0);
+}
+
+#subLogoButtons>.button {
+    padding: 0 !important;
+    margin: 0 16px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-size: 24px !important;
+    transition-duration: 0.25s;
+}
+
+#subLogoButtons>.button:hover {
+    transform: unset;
+    color: var(--accent);
+}
+ 
+  /* button stuff */
+
+  .button {
+      transform: unset !important;
+  }
+
+  .button.small {
+      border: unset !important;
+      background-color: transparent;
+      padding-left: 33px !important;
+  }
+
+  /* menu stuff */
+
+#menuItemContainer {
+    flex-direction: row;
+    top: unset;
+    bottom: 20px;
+    left: 50%;
+    width: unset;
+    background-color: transparent;
+    transform: translateX(-50%)
+}
+#menuItemContainer > div > span {
+    display: none;
+}
+.menuItem {
+    background-color: transparent;
+    margin: 0 16px;
+}
+
+.menuItem:hover {
+    border-left: none;
+}
+
+.menuItem .menuItemIcon {
+    display: none;
+}
+
+.menuItem .menuItemTitle {
+    margin: 0;
+    font-size: 24px !important;
+    transition-duration: 0.25s;
+}
+
+.menuItem:hover> .menuItemTitle {
+    color: var(--accent);
+}
+
+  /* HUD shit aka chat and the fuckin player list thing */
+  #uiBase.onMenu #chatHolder {
+      left: unset;
+      right: 10px;
+      bottom: 15%;
+  }
+  #chatInput::placeholder{
+      color: #FFC0CB
+  }
+  #chatList::-webkit-scrollbar{
+     display:visible;
+  }
+
+  #chatSwitch:after {
+     display: hidden ;
+  }
+
+  #chatInputHolder {
+     background-color: pink;
+      border: 2px solid rgb(255 0 255 / 100%)
+  }
+  #chatInput {
+     margin-left: -22%;
+     background-color: rgb(43 275 192 / %);
+     border: 2px solid rgb( 0 / 0%);
+  }
+
+  #chatList {
+     background-color: rgb(255 192 203 / 40%);
+  }
+  #chatHolder:focus-within #chatInputHolder::before{
+      opacity: 0;
+  }
+  #leaderDisplay {
+      background-color: #edabd7;
+      opacity: 1;
+  }
+  #newLeaderDisplay {
+    color: rgba(255 192 203 / 100%)
+  }
+  #chatInput::placeholder{
+      color: transparent;
+  }
+
+  /* kpd shit */
+#policeButton {
+  background-image : url(https://media.discordapp.net/attachments/857164987038302238/952573091517714513/MF8yNjAucG5n.png)
+  
+}
+
+      
+
+  /* Centering Health and Image */
+  #hudClassIcon{
+      background-color:rgba(0,0,0,0);
+      background-image:url(https://i.postimg.cc/FHP8XqkG/safu.png);
+      background-size:cover;
+      width:425px;
+      height:600px;
+      transform:scale(0.75) translate(-75%, 25%);
+  }
+  #hudClassImg{
+      display:none;
+  }
+  #bottomLeftHolder{
+      position:absolute;
+      bottom:1%;
+      left:50%;
+  }
+  /* Ammo */
+  #ammoIcon{
+      display:none;
+  }
+  #ammoDisplay{
+      background-color:rgba(0,0,0,0);
+  }
+  #ammoVal{
+      text-shadow: 3px 3px 0px var(--secondary-color), 3px 3px 8px #000000;
+      color: var(--main-color);
+  }
+  #ammoMax{
+      text-shadow: 3px 3px 0px var(--secondary-color), 3px 3px 8px #000000;
+      color: var(--main-color);
+  }
+  /* Health */
+  #healthBar{
+      display:none;
+  }
+  #healthValueHolder{
+      position:fixed;
+      left:35%;
+      bottom:5%;
+      transform:scale(2) translate(15%, -100%);
+      background-color:rgba(0,0,0,0);
+  }
+  #healthValue{
+      text-shadow: 2px 2px 0px var(--secondary-color), 2px 2px 8px #000000;
+      color: var(--main-color);
+      transform:translateY(-25%);
+  }
+  #maxHP{
+      color: var(--main-color);
+  }
+  #challIcon[src="./img/hp_0.png"]{
+      transform:scale(.75);
+      opacity:var(--health-icon-opacity);
+      filter: drop-shadow(0px 0px 0px var(--main-color)) drop-shadow(2px 2px 0px var(--secondary-color)) drop-shadow(2px 2px 8px #000000);
+  }
+  /* Timer */
+  #timerDisplay{
+      position:fixed;
+      left:35%;
+      bottom:5%;
+      background-color:rgba(0,0,0,0);
+      transform:scale(1.25);
+  }
+  #timerVal{
+      text-shadow: 3px 3px 0px var(--secondary-color), 3px 3px 8px #000000;
+      color: var(--main-color);
+  }
+  #timerIcon{
+      opacity:var(--timer-icon-opacity);
+      filter: drop-shadow(0px 0px 0px var(--main-color)) drop-shadow(3px 3px 0px var(--secondary-color)) drop-shadow(3px 3px 8px #000000);
+      transform:scale(.75) translateY(25%);
+  }
+  /* Weapons */
+  .weapItem{
+      filter:drop-shadow(4px 4px 0px var(--main-color)) drop-shadow(4px 4px 8px #000000) ;
+  }
+  .weapIcon{
+      position:relative;
+      left:0px;
+      transition: left ease 0.5s;
+  }
+  .weapIcon[style*="opacity: 0.7"], .weapIcon[style*="opacity:0.7"] {
+      left:0px;
+      opacity:1;
+  }
+  .weapIcon[style*="opacity:1"], .weapIcon[style*="opacity: 1"] {
+      left:-50px;
+      opacity:0;
+  }
+  /* class menu */
+  .classCard {
+    width: 670px;
+    height: 39px;
+    transition: 0.3s;
+    font-family: arial;
+    font-size: 40px!important;
+}
+
+.classCard:hover {
+    height: 255px;
+    font-family: arial;
+}
+
+.classXPBar {
+    left: 35%;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    display: none!important;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #868686;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.6);
+    box-shadow: inset 0 0 2px rgba(0,0,0,.6);
+     display: none!important;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+     display: none!important;
+}
+
+.classCard, .classLvl, .classHP, .classWeap {
+    color: black!important;
+         text-shadow: -1px -1px 0 #20202000,1px -1px 0 #20202000,-1px 1px 0 #20202000,1px 1px 0 #20202000,-2px -2px 0 #20202000,2px -2px 0 #20202000,-2px 2px 0 #20202000,2px 2px 0 #2020;
+       font-family: arial;
+}
+
+.classLvl {
+    font-family: Arial;
+    font-size: 35px!important;
+}
+
+.classWeap, .classHP {
+        font-family: Arial;
+     font-size: 35px!important;
+}
