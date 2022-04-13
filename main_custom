@@ -5,17 +5,28 @@ IGN : quicksex
 twitter : @reikatugames
 tiktok : @reikatu , @quicksax
  */
-  : root {
-      --health-icon-opacity: 1;
-      --timer-icon-opacity: 1;
-      --main-color: #ff9cf3;
-      --secondary-color: #F4CCCC;
-  }
-  @font-face {
-      font-family: gamefont;
-      src: url(https://dl.dropboxusercontent.com/s/p8l443v4hlry84t/orbitron-bold.otf?dl=0)
-  }
-/* ads */
+:root {
+  --main-color: #ee2611;
+  --secondary-color: #000000 ;
+  --third-color: green:
+}
+div{
+    color:white!Important;
+}
+/* click to enter thing */
+#instructions {
+  visibility: hidden;
+}
+#instructions:after {
+  visibility: visible;
+  content: 'S T A R T ';
+  color:white;
+  padding-right: 310px!important;
+  left: unset;
+  bottom: unset
+}
+/* ads hider */
+
 div#streamContainer { display: none; }
 div#twitchDropsAd.youNewDiv { display: none !important; }
 div#doubleXPAd.youNewDiv { display: none !important; }
@@ -37,336 +48,836 @@ div#bundlePop { display: none !important; }
 div#claimPop { display: none !important; }
 div#bubbleContainer { display: none !important}
 
-  /* customise button */
-#menuClassNameTag,
-#menuClassName,
-#menuClassSubtext {
-    display: none !important;
+/* logo stuff */
+#seasonLabel{
+  content: url(https://media.discordapp.net/attachments/943917484992507925/957676905941827594/among-us-logo-png-1-1024x584.webp);
+  transform: scale(10);
+  left: 37%;
+  top: 20%
 }
-
-#customizeButton {
-    left: ;
-    bottom: -70px;
+#mainLogo{
+    display: none;
+}	
+#gameNameHolder:hover #seasonLabel {
 }
-  /* the left slider thing */
-
-
-#menuHolder:before{
-  left: 20%;
-  bottom: 20%
-}
-  /* the main logo hover thing */
-
-  #mainLogo {
-      content: url(https://media.discordapp.net/attachments/857164987038302238/952573091517714513/MF8yNjAucG5n.png);
-    transform:scale(1.2);
-    position: ;
-  }
-  #gameNameHolder:hover #mainLogo {
-  }
-
-  #gameNameHolder {
-      pointer-events: all;
-      font-size: 0;
-      color: transparent;
-      transition: 0.5s;
-  }
-  #gameNameHolder:hover {
-      font-size: 33px;
-      color: #fff;
-      top: 0%;
-      bottom: 10%
-  }
-
-  #gameNameHolder::before {
+  #gameNameHolder::after {
       content: "made by Itami#3975";
       display: block;
       font-family: 'ISOCP';
+     bottom: 4$
+  }
+/* Chat stuff */
+#voiceDisplay{
+  display: none;
+}
+#uiBase.onMenu #chatHolder {
+      left: 85%;
+      right: unset;
+      bottom: 150px;
   }
 
-  /* the HUD shit */
-  
-  #clientExit {
-    display: flex;
-  }
-  #killCount:after {
-      content:"K";
-  }
-
-  #deathCount:after {
-    content:"D";
-  }
-
-  #streakCount:after {
-      content:"S";
-  }
-
-  #scoreCount:after {
-    content:"P";
-  }
- 
-  /* host stuff */
-
-#subLogoButtons {
-    bottom: 72px;
-    transform: translate(-50%,0);
-}
-
-#subLogoButtons>.button {
-    padding: 0 !important;
-    margin: 0 16px;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    font-size: 24px !important;
-    transition-duration: 0.25s;
-}
-
-#subLogoButtons>.button:hover {
-    transform: unset;
-    color: var(--accent);
-}
- 
-  /* button stuff */
-
-  .button {
-      transform: unset !important;
-  }
-
-  .button.small {
-      border: unset !important;
-      background-color: transparent;
-      padding-left: 33px !important;
-  }
-
-  /* menu stuff */
-
-#menuItemContainer {
-    flex-direction: row;
-    top: unset;
-    bottom: 20px;
-    left: 50%;
-    width: unset;
-    background-color: transparent;
-    transform: translateX(-50%)
-}
-#menuItemContainer > div > span {
-    display: none;
-}
-.menuItem {
-    background-color: transparent;
-    margin: 0 16px;
-}
-
-.menuItem:hover {
-    border-left: none;
-}
-
-.menuItem .menuItemIcon {
-    display: none;
-}
-
-.menuItem .menuItemTitle {
-    margin: 0;
-    font-size: 24px !important;
-    transition-duration: 0.25s;
-}
-
-.menuItem:hover> .menuItemTitle {
-    color: var(--accent);
-}
-
-  /* HUD shit aka chat and the fuckin player list thing */
-  #uiBase.onMenu #chatHolder {
-      left: unset;
-      right: 10px;
-      bottom: 15%;
-  }
-  #chatInput::placeholder{
-      color: #FFC0CB
-  }
   #chatList::-webkit-scrollbar{
-     display:visible;
+     display:none;
   }
 
   #chatSwitch:after {
-     display: hidden ;
+     display: none;
   }
 
   #chatInputHolder {
-     background-color: pink;
-      border: 2px solid rgb(255 0 255 / 100%)
+     background-color: red;
+      border: 7px solid rgb(74 16 12 / 100%)
   }
   #chatInput {
      margin-left: -22%;
-     background-color: rgb(43 275 192 / %);
+     background-color: rgb(238 38 38 / 35%);
      border: 2px solid rgb( 0 / 0%);
   }
 
   #chatList {
-     background-color: rgb(255 192 203 / 40%);
+     background-color: rgb(238 38 38 / 35%);
   }
   #chatHolder:focus-within #chatInputHolder::before{
       opacity: 0;
   }
-  #leaderDisplay {
-      background-color: #edabd7;
-      opacity: 1;
-  }
-  #newLeaderDisplay {
-    color: rgba(255 192 203 / 100%)
-  }
-  #chatInput::placeholder{
-      color: transparent;
-  }
-
-  /* kpd shit */
-#policeButton {
-  background-image : url(https://media.discordapp.net/attachments/857164987038302238/952573091517714513/MF8yNjAucG5n.png)
-  
+#chatInput::placeholder{
+    color: transparent;
 }
 
-      
+#chatInputHolder::before{
+    content: "sussy";
+    position: absolute;
+    color: #fff;
+    bottom: 22px;
+    left: 20px;
+    opacity: 0.4;
+    pointer-events: none;
+    
+}
 
-  /* Centering Health and Image */
-  #hudClassIcon{
-      background-color:rgba(0,0,0,0);
-      background-image:url(https://i.postimg.cc/FHP8XqkG/safu.png);
-      background-size:cover;
-      width:425px;
-      height:600px;
-      transform:scale(0.75) translate(-75%, 25%);
-  }
+#chatHolder:focus-within #chatInputHolder::before{
+    opacity: 0;
+}
+/* leader menu */
+#newLeaderDisplay, #leaderContainer, #leaderDisplay  {
+  background-image: url(https://imgs.search.brave.com/4ON1fW2Ntl01osCvPv6RKQ_4SaNkZMEJ8ErHpFUzX0Y/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvMm9idzl5/eWxkZHI1MS5qcGc);
+  left: 50%
+}
+/* hud stuff */
   #hudClassImg{
       display:none;
   }
+  #hudClassIcon{
+      background-color:rgba(0,0,0,0);
+      background-image:url(https://i.postimg.cc/Zqn4WcCX/3ba4c89195166139e530d21fa3f9f79f.webp);
+      background-size:cover;
+      width:300px;
+      height:300px;
+      right: unset;
+      left: 4px
+  }
   #bottomLeftHolder{
       position:absolute;
-      bottom:1%;
-      left:50%;
+      bottom:0.5%;
+      left:10%;
   }
-  /* Ammo */
-  #ammoIcon{
-      display:none;
-  }
-  #ammoDisplay{
-      background-color:rgba(0,0,0,0);
-  }
-  #ammoVal{
-      text-shadow: 3px 3px 0px var(--secondary-color), 3px 3px 8px #000000;
-      color: var(--main-color);
-  }
-  #ammoMax{
-      text-shadow: 3px 3px 0px var(--secondary-color), 3px 3px 8px #000000;
-      color: var(--main-color);
-  }
-  /* Health */
+ /* Health */
   #healthBar{
       display:none;
   }
   #healthValueHolder{
       position:fixed;
-      left:35%;
-      bottom:5%;
-      transform:scale(2) translate(15%, -100%);
+      left:45%;
+      bottom:83%;
+      transform:scale(1.7) translate(15%, -100%);
       background-color:rgba(0,0,0,0);
+      
   }
   #healthValue{
-      text-shadow: 2px 2px 0px var(--secondary-color), 2px 2px 8px #000000;
-      color: var(--main-color);
+      text-shadow: 2px 2px 0px var(--main-color), 2px 2px 8px #000000;
+      color: var(--secondary-color);
       transform:translateY(-25%);
   }
   #maxHP{
-      color: var(--main-color);
+      color: white
   }
   #challIcon[src="./img/hp_0.png"]{
-      transform:scale(.75);
+      transform:scale(1);
       opacity:var(--health-icon-opacity);
       filter: drop-shadow(0px 0px 0px var(--main-color)) drop-shadow(2px 2px 0px var(--secondary-color)) drop-shadow(2px 2px 8px #000000);
+
   }
+
   /* Timer */
-  #timerDisplay{
+    #timerDisplay{
       position:fixed;
-      left:35%;
-      bottom:5%;
+      left:45%;
+      bottom:93%;
       background-color:rgba(0,0,0,0);
       transform:scale(1.25);
   }
   #timerVal{
-      text-shadow: 3px 3px 0px var(--secondary-color), 3px 3px 8px #000000;
-      color: var(--main-color);
+      text-shadow: 2px 2px 0px var(--main-color), 2px 2px 8px #000000;
+      color: white;
+    
   }
-  #timerIcon{
+#timerIcon{
       opacity:var(--timer-icon-opacity);
       filter: drop-shadow(0px 0px 0px var(--main-color)) drop-shadow(3px 3px 0px var(--secondary-color)) drop-shadow(3px 3px 8px #000000);
       transform:scale(.75) translateY(25%);
   }
-  /* Weapons */
-  .weapItem{
-      filter:drop-shadow(4px 4px 0px var(--main-color)) drop-shadow(4px 4px 8px #000000) ;
-  }
-  .weapIcon{
-      position:relative;
-      left:0px;
-      transition: left ease 0.5s;
-  }
-  .weapIcon[style*="opacity: 0.7"], .weapIcon[style*="opacity:0.7"] {
-      left:0px;
-      opacity:1;
-  }
-  .weapIcon[style*="opacity:1"], .weapIcon[style*="opacity: 1"] {
-      left:-50px;
-      opacity:0;
-  }
-  /* class menu */
+/* kpd */
+#policeButton {
+  content: url(https://i.postimg.cc/YSwRCp8P/latest.webp);
+   margin: none;
+    border: none;
+  margin-right: 40px;
+   margin-left: 12px;
+  left: unset;
+  right: 80px;
+    bottom: -120%
+}
+#policeButton img {
+    margin: 0 !important;
+    height: 30px !important;
+    opacity: 0;
+}
+/* menu */
+#menuMiniProfilePic, #menuAccountUsername, #mailIcon, #mailCount, #mLevelCont, .rankClck, #levelContainer, .progressBar, #menuKRCount,#menuJNKCount, .verticalSeparator {
+   display: none;
+  visibility: hidden;
+}
+  /* host stuff */
+
+#subLogoButtons {
+    display: grid;
+    top: 700px;
+    bottom: 12%;
+    left: 50%;
+    width: unset;
+    background-color: transparent;
+    transform: translateX(-50%)
+}
+
+#subLogoButtons>.button {
+    padding: 2px !important;
+    margin: 0 140px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-size: 25px !important;
+    transition-duration: 0.25s;
+}
+
+#subLogoButtons>.button:hover {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    background-color: lime!Important;
+}
+ .material-icons-outlined {
+color: white !important
+}
+
+  /* button stuff */
+
+  .button:hover { border-radius: 15 15px; transition: ease 0.01s;
+    color: green!Important
+}
+  .button { border-radius: 15px 15px; transition: ease 0.1s;
+    color: white!important
+}
+
+  /* menu stuff */
+#menuWindow{
+  background-image: url(https://imgs.search.brave.com/4ON1fW2Ntl01osCvPv6RKQ_4SaNkZMEJ8ErHpFUzX0Y/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvMm9idzl5/eWxkZHI1MS5qcGc);
+}
+#menuItemContainer {
+	display: flex !important;
+	flex-direction: row !important;
+	height: 114.895px !important;
+	left: 0 !important;
+	position: absolute !important;
+	top: -20px;
+	width: 100% !important
+}
+
+.menuItem{
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	height: 55% !important;
+	width: 110% !important;
+    bottom: 15px!important;
+}
+
+@font-face {
+    font-family: 'material icons';
+    src: url(https://fonts.gstatic.com/s/materialicons/v59/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2);
+}
+
+.iconProfile:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content:'manage_accounts';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconShop {
+    visibility: hidden;
+}
+
+.iconShop:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'storefront';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconChall {
+    visibility: hidden;
+}
+
+.iconChall:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'tour';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconSocial {
+    visibility: hidden;
+}
+
+.iconSocial:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'language';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconGames {
+    visibility: hidden;
+}
+
+.iconGames:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'casino';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconMods {
+    visibility: hidden;
+}
+
+.iconMods:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'mode';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconSettings {
+    visibility: hidden;
+}
+
+.iconSettings:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'settings_suggest';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+.menuItemTitle {
+    position: absolute;
+    font-size: 18.8px!important;
+    bottom: 9px!important;
+}
+
+#menuItemContainer {
+        transform: translateY(-140px);
+             transform: translateY(-160px);
+        transition: 0.5s -webkit-transform;
+             transition-duration: 0.5s;
+}
+        
+#menuItemContainer:hover {
+                   transform: translateY(3.8px);
+                    transform: translateY(3.8px);
+                    border-style: solid!important;
+                    border-color: #000!important;
+}
+
+#menuItemContainer {
+            top: -5px
+        }
+        .menuItem:hover {
+            border-top: none;
+        }
+        .menuItem .menuItemTitle {
+            margin-top: -3%;
+            color: white;
+            text-shadow: 0 0 1px black, 0px 0 3px black, 0 0 5px black, 0px 0 7px #000;
+        }
+        .menuItem:hover {
+            border-left: none!important;
+            border-top: 9px solid #fff;
+        }
+        #menuItemContainer::before {
+            content: '';
+            position: absolute;
+            top: 160%;
+            right: 49.5%;
+            width: 25px!important;
+            height: 25px!important;
+            border-top: 2px solid transparent;
+            border-left: 5.2px solid #ff6464;
+            border-bottom: 5.2px solid #ff6464;
+            border-right: 2px solid transparent;
+            transform: rotate(315deg);
+
+        }
+         #menuItemContainer::after {
+            content: '';
+            position: absolute;
+            top: -160%;
+            right: 47.5%;
+            width: 6px;
+            height: 6px;
+            border-top: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 600px solid transparent;
+            transform: rotate(90deg);
+            pointer-events: auto!important;
+}
+
+.menuItem {
+	background: #000000 !important;
+}
+@font-face {
+    font-family: 'material icons';
+    src: url(https://fonts.gstatic.com/s/materialicons/v59/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2);
+}
+
+.iconProfile {
+    visibility: hidden;
+}
+
+.iconProfile:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content:'manage_accounts';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconShop {
+    visibility: hidden;
+}
+
+.iconShop:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'storefront';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconChall {
+    visibility: hidden;
+}
+
+.iconChall:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'tour';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconSocial {
+    visibility: hidden;
+}
+
+.iconSocial:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'language';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconGames {
+    visibility: hidden;
+}
+
+.iconGames:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'casino';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconMods {
+    visibility: hidden;
+}
+
+.iconMods:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'mode';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconSettings {
+    visibility: hidden;
+}
+
+.iconSettings:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'settings_suggest';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+.menuItemTitle {
+    position: absolute;
+    font-size: 18.8px!important;
+    bottom: 9px!important;
+}
+
+#menuItemContainer {
+        transform: translateY(-110px);
+             transform: translateY(-110px);
+        transition: 0.5s -webkit-transform;
+             transition-duration: 0.5s;
+}
+        
+#menuItemContainer:hover {
+                   transform: translateY(3.8px);
+                    transform: translateY(3.8px);
+                    border-style: solid!important;
+                    border-color: #000!important;
+}
+
+#menuItemContainer {
+            top: -4.5px
+        }
+        .menuItem:hover {
+            border-top: none;
+        }
+        .menuItem .menuItemTitle {
+            margin-top: -3%;
+            color: white;
+            text-shadow: 0 0 1px black, 0px 0 3px black, 0 0 5px black, 0px 0 7px #000;
+        }
+        .menuItem:hover {
+            border-left: none!important;
+            border-top: 9px solid #fff;
+        }
+        #menuItemContainer::before {
+            content: '';
+            position: absolute;
+            top: 130%;
+            right: 49.5%;
+            width: 25px!important;
+            height: 25px!important;
+            border-top: 2px solid transparent;
+            border-left: 5.2px solid #ff6464;
+            border-bottom: 5.2px solid #ff6464;
+            border-right: 2px solid transparent;
+            transform: rotate(315deg);
+
+        }
+         #menuItemContainer::after {
+            content: '';
+            position: absolute;
+            top: -160%;
+            right: 47.5%;
+            width: 6px;
+            height: 6px;
+            border-top: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 600px solid transparent;
+            transform: rotate(90deg);
+            pointer-events: auto!important;
+}
+
+.menuItem {
+	background: #ff868600 !important;
+}
+
+@font-face {
+    font-family: 'material icons';
+    src: url(https://fonts.gstatic.com/s/materialicons/v59/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2);
+}
+
+.iconProfile {
+    visibility: hidden;
+}
+
+.iconProfile:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content:'manage_accounts';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconShop {
+    visibility: hidden;
+}
+
+.iconShop:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'storefront';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconChall {
+    visibility: hidden;
+}
+
+.iconChall:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'tour';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconSocial {
+    visibility: hidden;
+}
+
+.iconSocial:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'language';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconGames {
+    visibility: hidden;
+}
+
+.iconGames:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'casino';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconMods {
+    visibility: hidden;
+}
+
+.iconMods:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'mode';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+
+.iconSettings {
+    visibility: hidden;
+}
+
+.iconSettings:after {
+    visibility: visible; 
+    font-family: 'material icons';
+    content: 'settings_suggest';
+    font-size: 50px;
+    border-bottom: 2px solid wheat;
+}
+.menuItemTitle {
+    position: absolute;
+    font-size: 18.8px!important;
+    bottom: 9px!important;
+}
+
+#menuItemContainer {
+        transform: translateY(-110px);
+             transform: translateY(-110px);
+        transition: 0.5s -webkit-transform;
+             transition-duration: 0.5s;
+}
+        
+#menuItemContainer:hover {
+                   transform: translateY(3.8px);
+                    transform: translateY(3.8px);
+                    border-style: solid!important;
+                    border-color: #000!important;
+}
+
+#menuItemContainer {
+            top: -4.5px
+        }
+        .menuItem:hover {
+            border-top: none;
+        }
+        .menuItem .menuItemTitle {
+            margin-top: -3%;
+            color: white;
+            text-shadow: 0 0 1px black, 0px 0 3px black, 0 0 5px black, 0px 0 7px #000;
+        }
+        .menuItem:hover {
+            border-left: none!important;
+            border-top: 9px solid #fff;
+        }
+        #menuItemContainer::before {
+            content: '';
+            position: absolute;
+            top: 130%;
+            right: 49.5%;
+            width: 25px!important;
+            height: 25px!important;
+            border-top: 2px solid transparent;
+            border-left: 5.2px solid #ff6464;
+            border-bottom: 5.2px solid #ff6464;
+            border-right: 2px solid transparent;
+            transform: rotate(315deg);
+
+        }
+         #menuItemContainer::after {
+            content: '';
+            position: absolute;
+            top: -120%;
+            right: 47.5%;
+            width: 6px;
+            height: 6px;
+            border-top: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-bottom: 600px solid transparent;
+            transform: rotate(2deg);
+            pointer-events: auto!important;
+}
+
+.menuItem {
+	background: #ff868600 !important;
+}
+/* icons to make it look like mogus */
+#menuClassNameTag,
+#menuClassName,
+#menuClassSubtext {
+    display: none !important;
+}
+#customizeButton {
+    left: unset ;
+    right: 110px;
+    bottom: -120%;
+    transform: scale(1)
+}
+#menuClassContainer {
+  visibility: none;
+  left: 4%;
+  right: unset;
+  bottom: -540px;
+  transform: scale(1.);
+}
+/* weapon stuff */
+.weapKey {
+    display:none;
+}
+
+.weapIcon {
+    transition:transform 0.3s;
+}
+
+#weapDisplay {
+    display:flex !important;
+    flex-direction:row;
+    right:50%;
+    bottom:3%;
+    transform:translateX(50%);
+    filter: brightness(100) sepia(1) saturate(823%) opacity(100%) hue-rotate(210deg);
+}
+
+#weapItem_0 .weapIcon[style*="opacity: 1;"] {
+    transform:translateX(150px) translateY(-100px);
+    transition:transform 0.3s;
+}
+
+#weapItem_1 .weapIcon[style*="opacity: 1;"] {
+    transform:translateY(-100px);
+    transition:transform 0.3s;
+}
+
+#weapItem_2 .weapIcon[style*="opacity: 1;"] {
+    transform:translateX(-150px) translateY(-100px);
+    transition:transform 0.3s;
+}
+
+#uiBase.onDeathScrn #weapDisplay {
+    display:none !important;
+}
   .classCard {
-    width: 670px;
-    height: 39px;
-    transition: 0.3s;
-    font-family: arial;
-    font-size: 40px!important;
+    background-color: transparent;
+    color: var(--accent-color) !important;
+    text-shadow: none;
 }
 
-.classCard:hover {
-    height: 255px;
-    font-family: arial;
-}
-
-.classXPBar {
-    left: 35%;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-    display: none!important;
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #868686;
-    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.6);
-    box-shadow: inset 0 0 2px rgba(0,0,0,.6);
-     display: none!important;
-}
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    border-radius: 10px;
-    background-color: #f5f5f5;
-     display: none!important;
-}
-
-.classCard, .classLvl, .classHP, .classWeap {
-    color: black!important;
-         text-shadow: -1px -1px 0 #20202000,1px -1px 0 #20202000,-1px 1px 0 #20202000,1px 1px 0 #20202000,-2px -2px 0 #20202000,2px -2px 0 #20202000,-2px 2px 0 #20202000,2px 2px 0 #2020;
-       font-family: arial;
+.classWeap {
+    text-shadow: none !important;
+    transition-duration: 0.3s;
 }
 
 .classLvl {
-    font-family: Arial;
-    font-size: 35px!important;
+    color: var(--accent-color) !important;
+    transition-duration: 0.3s;
 }
 
-.classWeap, .classHP {
-        font-family: Arial;
-     font-size: 35px!important;
+.classHP {
+    color: var(--accent-color) !important;
+    transition-duration: 0.3s;
+}
+
+.classHP span {
+    color: var(--accent-color) !important;
+}
+
+.classCard:hover .classHP {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.classCard:hover .classLvl {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.classCard:hover .classWeap {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.classImgC {
+    border-radius: 10px;
+}
+
+.classXPBar {
+    background-color: var(--menu-bg-color-secondary);
+    border-radius: 10px;
+}
+
+.clsXPBarC {
+    margin: 0;
+    background-color: var(--accent-color);
+    height: 26px;
+    border-radius: 10px;
+}
+
+.classCard:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.classCard img {
+    opacity: 0.7;
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+  
+  /* spectate button */
+#uiBase.onMenu #spectButton {
+	position: fixed;
+    top: 7%;
+    left: 12%;
+    bottom: -24%;
+    border-bottom: wheat;
+    border-top: wheat;
+	transform: none;
+	text-transform: var(--text-transform);
+
+}
+
+#spectButton :not(.switchsml) {
+    color: #0088ff00 !important;
+}
+
+
+#mLevelCont {
+    position: relative;
+    left: -55px !important;
+    font-size: 16px;
+    line-height: unset;
+    height: unset;
+    visibility: hidden;
+    padding: 0 4px;
+    margin-left: 8px;
+    border-radius: 4px;
 }
